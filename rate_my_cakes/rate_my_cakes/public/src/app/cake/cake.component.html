@@ -1,0 +1,15 @@
+
+<html lang="en">
+
+<div id="bottom_box" *ngIf="showCakePressed == true">
+  <h1>Baker: {{currentCake.bakerName}}</h1>
+    <img [src]="currentCake['imgURL']">
+    <p>Rating: {{cakeAvg}}</p>
+
+    <div *ngFor="let comment of currentCake['comments']">
+      <h3>{{comment.content}}</h3>
+      <h3>{{comment.rating}}</h3>
+    </div>
+</div>
+
+</html>

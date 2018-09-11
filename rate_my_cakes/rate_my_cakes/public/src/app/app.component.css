@@ -1,0 +1,55 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 80%;
+    height: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.form {
+    width: 30%;
+    display: inline-block;
+    height: 25%;
+    border: 2px solid grey;
+    vertical-align: top;
+}
+
+#blue_button {
+    background-color: rgb(121, 199, 250);
+    color: white;
+    padding: 5px;
+}
+
+#subtitle {
+    color: grey;
+    border-bottom: 4px solid rgb(0, 140, 255);
+}
+
+#cake_box {
+    display: inline-block;
+    height: 300px;
+    overflow: scroll;
+}
+
+.grey_button {
+    background-color: grey;
+    color: white;
+    padding: 3px 8px;
+}
+
+.form2 {
+    display: inline-block;
+    width: 25%;
+    height: 200px;
+    vertical-align: top;
+}
+#cake_box img {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}

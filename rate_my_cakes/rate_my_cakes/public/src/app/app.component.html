@@ -1,0 +1,42 @@
+<html lang="en">
+	<head>
+		<title>rate my cake</title>
+</head>
+	<body>
+		<div id="wrapper">
+
+      <h1>Rate my Cakes</h1>
+
+      <form class="form" (submit)="onSubmit()">
+          <!-- use the json pipe to see how newTask changes in real time -->
+          <p id="subtitle">Be brave, submit your cake!</p>
+          <p>Baker:</p> <input type="text" name="newCake.bakerName" [(ngModel)]="newCake.bakerName" />
+          <p>Image url:</p> <input type="text" name="newCake.imgURL" [(ngModel)]="newCake.imgURL" />
+          <button id="blue_button">SUBMIT</button>
+      </form>
+      
+
+        <div id="cake_box">
+          <div class="listing" *ngFor="let cake of cakes">
+            <img [src]="cake.imgURL" (click)="show(cake._id)">
+            <form class="form2" (submit)="submitComment(cake)">
+              <select name="newComment.rating" [(ngModel)]="newComment.rating">
+                  <option value="1">1 star</option>
+                  <option value="2">2 stars</option>
+                  <option value="3">3 stars</option>
+                  <option value="4">4 stars</option>
+                  <option value="5">5 stars</option>
+              </select>
+              <textarea rows="4" cols="20" name="newComment.content" [(ngModel)]="newComment.content" placeholder="Enter your comment here."></textarea>
+              <button class="grey_button">Rate!</button>
+            </form>
+          </div>
+        </div>
+      
+      <app-cake [showCakePressed]="showCakePressed" *ngIf="currentCake" [currentCake]="currentCake" [cakeAvg]="cake_avg"></app-cake>
+
+
+    </div><!--end of wrapper-->
+	</body>
+</html>
+
